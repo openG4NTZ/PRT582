@@ -1,3 +1,5 @@
-# PRT582
-ASSIGMENT 1
-Game starts after user clicks StartGame.py
+# PRT582<br />
+
+ASSIGMENT 1<br />
+
+Game starts after user clicks StartGame.py<br />
