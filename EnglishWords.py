@@ -25486,4 +25486,4 @@ class English_Words:
         'Zulu',
         'Zurich',
         'zygote']
-        return English_Words.set[element]
+        return English_Words.set[element].lower()

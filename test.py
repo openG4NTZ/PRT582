@@ -9,9 +9,9 @@ class HangmanTestCases(unittest.TestCase):
     #Test Case 1: Check English Database
     def test_English_Word_Database(self):
         # Capture the results from the function
-        result=English_Words.get_English_Word(111)
+        result=English_Words.get_English_Word(7825)
         # Check for expected output
-        expected="abusive"
+        expected="english"
         self.assertEqual(expected,result,msg="Test Case 1 Failed")
     #Test Case 2: Check Random Word Generetor
     def test_random_Word_Generator(self):
@@ -49,11 +49,14 @@ class HangmanTestCases(unittest.TestCase):
         # get_input will return 'yes' during this test
     #Test Case 7: Test User Interface
     @patch('builtins.input', side_effect=['1', '2', '3', '4'])
+    #this function simulates user inputs,
     def test_user_GUI(self, mock_input):
+        #function user_GUI called 4 times with '1', '2', '3', '4' inputs
         calling_1 = Hangman.user_GUI(self,"Intro",0)
         calling_2 = Hangman.user_GUI(self,"Intro",0)
         calling_3 = Hangman.user_GUI(self,"Intro",0)
         calling_4 = Hangman.user_GUI(self,"Intro",0)
+        # Check for expected output
         self.assertTrue(calling_1 == '1' and calling_2 == '2' and
                         calling_3 == '3' and calling_4 == '4',msg="Test Case 7 Failed")
     #Test Case 8: Test correct guess

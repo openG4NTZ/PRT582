@@ -26,6 +26,7 @@ class Hangman:
             self.end_Game()
         else:
             # if user enters anyother number it go calls back the same function recursively
+            print(ScreenGap+"Wrong keyboard entry... ")
             return self.lifecalculator(self.user_GUI("Intro",0))
     # It returns error outputs depending on error codes
     def print_Error(self,ErrorCode):
@@ -52,11 +53,11 @@ class Hangman:
                      """)
         elif GameStatus == "Starting":
         # first User entry
-            return input("\n" + ScreenGap+"Hangman is starting, number of lives: "+str(NumberofLife)+"\n" + ScreenGap+"Please enter a single letter: ")
+            return input("\n" + ScreenGap+"Hangman is starting, number of lives: "+str(NumberofLife)+"\n" + ScreenGap+"Please enter a single letter: ").lower()
         elif GameStatus == "Started":
         # second and later entries
            if NumberofLife > 0:
-               return input (ScreenGap+"Please enter a single letter: ")
+               return input (ScreenGap+"Please enter a single letter: ").lower()
            else:
                # out of life
                print(ScreenGap+"GAME OVER...")
