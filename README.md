@@ -2,4 +2,8 @@
 
 ASSIGMENT 1<br />
 
-Game starts after user clicks StartGame.py<br />
+First Dowload all the documents to computer<br />
+
+To start the game click the StartGame.py<br />
+
+
