@@ -7,9 +7,9 @@ class Hangman:
     #English_Words class has 254800 words and it captures one word
     # Where the index number is equel to random number
     def random_Word_Generator(self):
-        global random
-        random=random.randint(0,25480)
-        return English_Words.get_English_Word(random)
+        global random_Number
+        random_Number=random.randint(0,25480)
+        return English_Words.get_English_Word(random_Number)
     #Splits Strings to list
     def split_Word(self,Word):
         return list(Word)
